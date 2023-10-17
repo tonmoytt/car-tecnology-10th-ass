@@ -1,11 +1,11 @@
 import { useContext } from "react";
+import swal from 'sweetalert';
 import { Link } from "react-router-dom";
 import { AuthProvider } from "../Provider/Provider";
 
 const Login = () => {
-    const {LoginUser} = useContext(AuthProvider)
+    const { LoginUser } = useContext(AuthProvider)
     const hendelLogin = event => {
-    
         event.preventDefault()
         const form = event.target;
         const email = form.email.value
@@ -13,14 +13,15 @@ const Login = () => {
         const user = { email, password }
         console.log(user);
 
-        LoginUser(email,password)
-        .then(result =>{
-            console.log(result.user);
-            alert('successfully Login');
-        })
-        .catch(error => {
-            console.error(error)
-        })
+        LoginUser(email, password)
+            .then(result => {
+                console.log(result.user);
+                swal("successfully!", "you are successfully Login!", "success");
+            })
+            .catch(error => {
+                console.error(error)
+                swal("error", "Your email and password do not match", "error");
+            })
     }
 
 

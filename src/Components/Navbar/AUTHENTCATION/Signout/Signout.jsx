@@ -1,27 +1,61 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthProvider } from "../Provider/Provider";
+import swal from "sweetalert";
 
 const Signout = () => {
-    const {CreateUser} =useContext(AuthProvider)
-    const hendelSignup=event =>{
+
+    const [password, setpassword] = useState('')
+
+    const { CreateUser, GoogleProvider } = useContext(AuthProvider)
+    const hendelSignup = event => {
         event.preventDefault()
-        const form=event.target;
-        const name=form.name.value
-        const email=form.email.value
-        const password=form.password.value
-        const user={name,email,password}
+        const form = event.target;
+        const name = form.name.value
+        const email = form.email.value
+        const password = form.password.value
+        const user = { name, email, password }
         console.log(user);
 
-        CreateUser(email,password)
-        .then(result =>{
-            console.log(result.user);
-            alert('successfully signup');
-        })
-        .catch(error => {
-            console.error(error)
-        })
-        
+        setpassword('')
+        if (password.length < 6) {
+            setpassword('password should be at least 6 character')
+        }
+        else if (!/[0-9]/.test(password)) {
+            setpassword('Please adding Number character')
+            return;
+        }
+        else if (!/[A-Z]/.test(password)) {
+            setpassword('Please adding at least 1 uppercase')
+            return;
+
+        }
+        else if (!/(?=.*[!@#$%^&*])/.test(password)) {
+            setpassword('Please adding at least one special character')
+            return;
+        }
+
+        CreateUser(email, password)
+            .then(result => {
+                console.log(result.user);
+                swal("successful!", "Registration successfully", "success");
+            })
+            .catch(error => {
+                console.error(error)
+            })
+
+    }
+
+    const hendelgoogle = () => {
+        GoogleProvider()
+            .then(result => {
+                console.log(result.user);
+                swal("successful!", "Google registration successful", "success");
+            })
+            .catch(error => {
+                console.error(error);
+                alert('error')
+            })
     }
     return (
         <div>
@@ -50,9 +84,7 @@ const Signout = () => {
                                     <span className="label-text">Password</span>
                                 </label>
                                 <input type="password" name="password" placeholder="password" className="input input-bordered" required />
-                                <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                                </label>
+
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Submit</button>
@@ -60,7 +92,16 @@ const Signout = () => {
                             <div>
                                 <p>Already have an account? <Link to="/login"> <button className="px-2 py-1 rounded-l-md font-semibold font-serif btn-outline btn-accent">Login</button></Link></p>
                             </div>
+
                         </form>
+                        <div className="mx-6 my-4">
+                            <p className="btn mt-4 w-full">Log in With <button onClick={hendelgoogle} className="text-blue-600 hover:bg-emerald-300 hover:px-3 py-2 rounded-lg hover:text-l btn-outline btn-secondary">GOOGLE</button></p>
+                        </div>
+                    </div>
+                    <div className='bg-red-200 rounded-lg'>
+                        {
+                            password && <p className='mt-4 px-4 py-2 font-semibold text-2xl '> {password}</p>
+                        }
                     </div>
                 </div>
             </div>
