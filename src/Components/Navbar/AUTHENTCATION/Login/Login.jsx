@@ -1,14 +1,26 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthProvider } from "../Provider/Provider";
 
 const Login = () => {
-
+    const {LoginUser} = useContext(AuthProvider)
     const hendelLogin = event => {
+    
         event.preventDefault()
         const form = event.target;
         const email = form.email.value
         const password = form.password.value
         const user = { email, password }
         console.log(user);
+
+        LoginUser(email,password)
+        .then(result =>{
+            console.log(result.user);
+            alert('successfully Login');
+        })
+        .catch(error => {
+            console.error(error)
+        })
     }
 
 
