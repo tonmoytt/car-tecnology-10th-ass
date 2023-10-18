@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import img from './../../assets/img/Electrical-Engineering-Logo-or-Icon-Graphics-9921044-3-580x387.jpg'
+import img from './../../assets/img/car img/logo.jpg'
 import { useContext } from "react";
 import { AuthProvider } from "./AUTHENTCATION/Provider/Provider";
 import swal from "sweetalert";

@@ -14,6 +14,8 @@ import Login from './Components/Navbar/AUTHENTCATION/Login/Login';
 import Signout from './Components/Navbar/AUTHENTCATION/Signout/Signout';
 import Provider from './Components/Navbar/AUTHENTCATION/Provider/Provider';
 import PrivetRoute from './Components/Navbar/AUTHENTCATION/PrivetRoute/PrivetRoute';
+import Latestcar from './Components/Navbar/Home/Latestcar/Latestcar';
+import Bestsell from './Components/Navbar/Home/Bestsell/Bestsell';
 
 const router = createBrowserRouter([
   {
@@ -43,6 +45,16 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Signout></Signout>
+
+      },
+      {
+        path: '/latest',
+        element:<PrivetRoute><Latestcar></Latestcar></PrivetRoute> 
+
+      },
+      {
+        path: '/bestsell',
+        element:<PrivetRoute><Bestsell></Bestsell></PrivetRoute> 
 
       },
     ]
