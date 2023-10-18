@@ -1,10 +1,15 @@
 import { useContext } from "react";
 import swal from 'sweetalert';
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthProvider } from "../Provider/Provider";
 
 const Login = () => {
     const { LoginUser } = useContext(AuthProvider)
+    const location = useLocation()
+    console.log(location);
+
+    const navigate = useNavigate()
+
     const hendelLogin = event => {
         event.preventDefault()
         const form = event.target;
@@ -17,6 +22,7 @@ const Login = () => {
             .then(result => {
                 console.log(result.user);
                 swal("successfully!", "you are successfully Login!", "success");
+                navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
                 console.error(error)

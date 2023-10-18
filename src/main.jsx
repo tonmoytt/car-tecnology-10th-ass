@@ -13,6 +13,7 @@ import MyCard from './Components/Navbar/MyCard/MyCard';
 import Login from './Components/Navbar/AUTHENTCATION/Login/Login';
 import Signout from './Components/Navbar/AUTHENTCATION/Signout/Signout';
 import Provider from './Components/Navbar/AUTHENTCATION/Provider/Provider';
+import PrivetRoute from './Components/Navbar/AUTHENTCATION/PrivetRoute/PrivetRoute';
 
 const router = createBrowserRouter([
   {
@@ -26,12 +27,12 @@ const router = createBrowserRouter([
       },
       {
         path: '/addproduct',
-        element: <Addproduct></Addproduct>
+        element: <PrivetRoute> <Addproduct></Addproduct> </PrivetRoute>
 
       },
       {
         path: '/mycard',
-        element: <MyCard></MyCard>
+        element:  <PrivetRoute><MyCard></MyCard></PrivetRoute>
 
       },
       {
