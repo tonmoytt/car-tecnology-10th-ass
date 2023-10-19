@@ -25,8 +25,8 @@ const SectionTwo = () => {
                     <p className="text-lg font-semibold">Money Back Guarantee</p>
                     <p>100% secure payment</p>
                 </div>
-                {/* trird section */}
             </div>
+            {/* third section */}
             <div className="flex items-center border-r-4 ">
                 <div className=''>
                     <img className='h-12 w-12 border rounded-full mr-3' src={gift} alt="" />
@@ -35,8 +35,8 @@ const SectionTwo = () => {
                     <p className="text-lg font-semibold">Special gift card</p>
                     <p>Purchase at least 5 Product</p>
                 </div>
-
             </div>
+  {/* four section */}
             <div className="flex items-center border-r-4 ">
                 <div className=''>
                     <img className='h-14 w-14 border rounded-full mr-3' src={shipping} alt="" />

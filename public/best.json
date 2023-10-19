@@ -1,0 +1,33 @@
+[
+    {
+        "id": 9,
+        "name": "Audi A4",
+        "img": "https://i.ibb.co/Y3R5hkn/9-Audi-A4.jpg",
+        "title": " Audi A4 X9",
+        "description": "The Audi A4 combines luxury, performance, and cutting-edge technology in a compact package.",
+        "price":"$ 420,00"
+    },
+    {
+        "id": 8,
+        "name": "Nissan Altima",
+        "img": "https://i.ibb.co/r2FBHpk/8-Nissan-Altima.jpg",
+        "title": "  Nissan Altima 2.5 SV",
+        "description": "The Nissan Altima offers a comfortable and spacious ride, ideal for daily commuting.",
+        "price": "$ 240,00"
+    },
+    {
+        "id": 3,
+        "name": "BMW 3 Series",
+        "img": "https://i.ibb.co/HxP4GPv/3-BMW-3-Series.jpg",
+        "title": " BMW 3 Series X7",
+        "description": "The BMW 3 Series is a luxury compact sedan known for its sporty handling and elegant interior.",
+        "price":"$ 350,00"
+    },
+    {
+        "id": 12,
+        "name": "Mazda CX-5",
+        "img": "https://i.ibb.co/JFKQdD4/12-Mazda-CX-5.jpg",
+        "title": " Mazda CX-5 Model Car",
+        "description": "The Mazda CX-5 is a stylish and sporty SUV that balances performance and practicality."
+    }
+]

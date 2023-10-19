@@ -5,15 +5,17 @@
         "img": "https://i.ibb.co/wQyHBjf/1-Toyota-Camry.jpg",
         "title": " Toyota Camry 2023",
         "description": "The reliable and fuel-efficient Toyota Camry offers a smooth ride with advanced safety features.",
-        "price": "$ 250,00"
+        "price": "$ 250,00",
+        "rating": 4.8
     },
     {
         "id": 2,
         "name": "Ford Mustang",
-        "img": "https://i.ibb.co/jyhsQgk/2-Ford-Mustang.jpg",
+        "img": "https://i.ibb.co/NydGpxW/2-Ford-Mustang-GT.jpg",
         "title": " Ford Mustang GT",
         "description": "The iconic Ford Mustang GT combines performance and style, making every drive exhilarating.",
-        "price": "$ 400,00"
+        "price": "$ 400,00",
+        "rating": 4.7
     },
     {
         "id": 3,
@@ -21,7 +23,8 @@
         "img": "https://i.ibb.co/HxP4GPv/3-BMW-3-Series.jpg",
         "title": " BMW 3 Series X7",
         "description": "The BMW 3 Series is a luxury compact sedan known for its sporty handling and elegant interior.",
-        "price":"$ 350,00"
+        "price":"$ 350,00",
+        "rating": 5.0
     },
     {
         "id": 4,
@@ -29,7 +32,8 @@
         "img": "https://i.ibb.co/XkTXnvv/4-Mercedes-Benz-E-Class.jpg",
         "title": " Mercedes-Benz E-Class",
         "description": "The Mercedes-Benz E-Class offers a blend of luxury, comfort, and advanced technology.",
-        "price": "$ 500,00"
+        "price": "$ 500,00",
+        "rating": 4.7
     },
     {
         "id": 5,
@@ -37,7 +41,8 @@
         "img": "https://i.ibb.co/TPzJsG8/5-Tesla-Model-3.jpg",
         "title": " Tesla Model v8",
         "description": "The Tesla Model 3 is an all-electric car with cutting-edge technology and eco-friendly performance.",
-        "price": "$ 450,00"
+        "price": "$ 450,00",
+        "rating": 4.6
     },
     {
         "id": 6,
@@ -45,7 +50,8 @@
         "img": "https://i.ibb.co/wyvh604/6-Honda-Civic.jpg",
         "title": " Honda Civic X33",
         "description": "The Honda Civic is a practical and efficient compact car known for its reliability.",
-        "price": "$ 200,00"
+        "price": "$ 200,00",
+        "rating": 5.0
     },
     {
         "id": 7,
@@ -53,7 +59,8 @@
         "img": "https://i.ibb.co/4PW9DwM/7-Chevrolet-Silverado.jpg",
         "title": "  Chevrolet Silverado 77-Class",
         "description": "The Chevrolet Silverado is a powerful and versatile pickup truck designed for work and play.",
-        "price": "$ 350,00"
+        "price": "$ 350,00",
+        "rating": 4.8
     },
     {
         "id": 8,
@@ -61,7 +68,8 @@
         "img": "https://i.ibb.co/r2FBHpk/8-Nissan-Altima.jpg",
         "title": "  Nissan Altima 2.5 SV",
         "description": "The Nissan Altima offers a comfortable and spacious ride, ideal for daily commuting.",
-        "price": "$ 240,00"
+        "price": "$ 240,00",
+        "rating": 4.7
     },
     {
         "id": 9,
@@ -69,7 +77,8 @@
         "img": "https://i.ibb.co/Y3R5hkn/9-Audi-A4.jpg",
         "title": " Audi A4 X9",
         "description": "The Audi A4 combines luxury, performance, and cutting-edge technology in a compact package.",
-        "price":"$ 420,00"
+        "price":"$ 420,00",
+        "rating": 4.5
     },
     {
         "id": 10,
@@ -77,7 +86,8 @@
         "img": "https://i.ibb.co/fQbzNhd/10-Lexus-RX.jpg",
         "title": " Lexus RX SUV ",
         "description": "The Lexus RX is a premium SUV known for its comfort, quality, and refined driving experience.",
-        "price": "$ 48,000"
+        "price": "$ 48,000",
+        "rating": 5.0
     },
     {
         "id": 11,
@@ -85,7 +95,8 @@
         "img": "https://i.ibb.co/yWt2Zjy/11-Subaru-Outback.jpg",
         "title": " Subaru Outback Model car",
         "description": "The Subaru Outback offers rugged capability and versatility for adventurous journeys.",
-        "price": "$ 280,00"
+        "price": "$ 280,00",
+        "rating": 4.9
     },
     {
         "id": 12,
@@ -93,6 +104,8 @@
         "img": "https://i.ibb.co/JFKQdD4/12-Mazda-CX-5.jpg",
         "title": " Mazda CX-5 Model Car",
         "description": "The Mazda CX-5 is a stylish and sporty SUV that balances performance and practicality.",
-        "price": "$ 300,00"
+        "price": "$ 300,00",
+        "rating": 4.7
+        
     }
 ]

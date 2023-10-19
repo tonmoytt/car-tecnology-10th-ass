@@ -15,16 +15,21 @@ import Signout from './Components/Navbar/AUTHENTCATION/Signout/Signout';
 import Provider from './Components/Navbar/AUTHENTCATION/Provider/Provider';
 import PrivetRoute from './Components/Navbar/AUTHENTCATION/PrivetRoute/PrivetRoute';
 import Latestcar from './Components/Navbar/Home/Latestcar/Latestcar';
-import Bestsell from './Components/Navbar/Home/Bestsell/Bestsell';
+// import Bestsell from './Components/Navbar/Home/Bestsell/Bestsell';
+import Best from './Components/Navbar/Home/Best/Best';
+import Error from './Components/Navbar/Home/Error/Error';
+import UserId from './Components/Navbar/Home/UserId/UserId';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<Error></Error>,
     children: [
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home></Home>,
+         loader: () => fetch('/data.json'),
 
       },
       {
@@ -54,7 +59,13 @@ const router = createBrowserRouter([
       },
       {
         path: '/bestsell',
-        element:<PrivetRoute><Bestsell></Bestsell></PrivetRoute> 
+        element:<PrivetRoute> <Best></Best> </PrivetRoute> 
+
+      },
+      {
+        path: '/car/:id',
+        element:<PrivetRoute>  <UserId></UserId> </PrivetRoute> ,
+        loader:(params) => fetch(`/data.json/${params.id}`)
 
       },
     ]
