@@ -27,8 +27,8 @@ const Addproduct = () => {
          .then(data => {
             console.log(data);
             if (data.insertedId) {
-                alert('successfull')
-                // swal("Congratulation", "Successfully added", "success");
+                
+                swal("Congratulation", "Successfully added", "success");
             }
          })
     }
