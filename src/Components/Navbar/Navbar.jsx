@@ -28,7 +28,7 @@ const Navbar = () => {
     const navlink = <>
         <li className="mr-4 font-semibold text-xm hover:underline hover:font-bold "><NavLink to="/">Home</NavLink></li>
         <li className="mr-4 font-semibold text-xm hover:underline hover:font-bold "><NavLink to="/addproduct">Add Product</NavLink></li>
-        <li className="mr-4 font-semibold text-xm hover:underline hover:font-bold "><NavLink to="/mycard">My Cart</NavLink></li>
+        <li className="mr-4 font-semibold text-xm hover:underline hover:font-bold "><NavLink to="/user">My Cart</NavLink></li>
         <li className="mr-4 font-semibold text-base rounded-xl bg-slate-100 hover:underline hover:font-bold "><NavLink to="/login">Login</NavLink></li>
     </>
     return (

@@ -38,11 +38,6 @@ const router = createBrowserRouter([
 
       },
       {
-        path: '/mycard',
-        element:  <PrivetRoute><MyCard></MyCard></PrivetRoute>
-
-      },
-      {
         path: '/login',
         element: <Login></Login>
 
@@ -66,6 +61,12 @@ const router = createBrowserRouter([
         path: '/car/:id',
         element:<PrivetRoute>  <UserId></UserId> </PrivetRoute> ,
         loader:(params) => fetch(`/data.json/${params.id}`)
+
+      },
+      {
+        path: '/user',
+        element:<PrivetRoute> <MyCard></MyCard> </PrivetRoute> ,
+        loader:() => fetch('http://localhost:5000/user')
 
       },
     ]

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 
 const ShowData = ({ propsData }) => {
-    const { id,img, name, title, description, price, rating } = propsData;
+    const { id, img, name, title, description, price, rating } = propsData;
     return (
         <div className=" mt-10 mb-4 bg-pink-500 text-red-500 ">
             <div className="card w-96 min-h-screen my-4 p-3 bg-black shadow-xl">
