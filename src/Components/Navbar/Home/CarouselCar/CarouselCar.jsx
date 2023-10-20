@@ -11,7 +11,7 @@ const CarouselCar = () => {
             <p className="text-3xl font-semibold mb-3 text-center">Carousel car's </p>
 
             <div className="bg-slate-100">
-                <div className="carousel w-full max-h-96">
+                <div className="carousel w-full max-h-[600px]">
                     <div id="item1" className="carousel-item w-full">
                         <img src={car1} className="w-full" />
                     </div>

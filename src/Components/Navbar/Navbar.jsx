@@ -6,36 +6,46 @@ import swal from "sweetalert";
 
 
 const Navbar = () => {
-    const { user,SignOut } = useContext(AuthProvider)
+    const { user, SignOut } = useContext(AuthProvider)
 
-    const hendelout =() =>{
+    const hendelout = () => {
         SignOut()
-        .then(result =>{
-            console.log(result.user);
-            
-        })
-        .catch(error =>{
-            console.error(error);
-            swal({
-                title: "Opps!",
-                text: "Successfull Logout",
-                icon: "success",
-                button: "Opps!",
-              });
-        
-        })
+            .then(result => {
+                console.log(result.user);
+
+            })
+            .catch(error => {
+                console.error(error);
+                swal({
+                    title: "Opps!",
+                    text: "Successfull Logout",
+                    icon: "success",
+                    button: "Opps!",
+                });
+
+            })
     }
     const navlink = <>
-        <li className="mr-4 font-semibold text-xm hover:underline hover:font-bold "><NavLink to="/">Home</NavLink></li>
-        <li className="mr-4 font-semibold text-xm hover:underline hover:font-bold "><NavLink to="/addproduct">Add Product</NavLink></li>
-        <li className="mr-4 font-semibold text-xm hover:underline hover:font-bold "><NavLink to="/user">My Cart</NavLink></li>
-        <li className="mr-4 font-semibold text-base rounded-xl bg-slate-100 hover:underline hover:font-bold "><NavLink to="/login">Login</NavLink></li>
+        <li className="mr-2 font-semibold text-lg hover:underline hover:font-bold "><NavLink to="/">Home</NavLink></li>
+        <li className="mr-2 font-semibold text-lg hover:underline hover:font-bold "><NavLink to="/addproduct">Add Product</NavLink></li>
+        <li className="mr-2 font-semibold text-lg hover:underline hover:font-bold "><NavLink to="/mycard">My Cart</NavLink></li>
+        <li className="mr-2 font-semibold text-base rounded-xl bg-slate-100 hover:underline hover:font-bold "><NavLink to="/login">Login</NavLink></li>
     </>
     return (
         <div className="bg-orange-300">
+
+            <div className="form-control">
+                <label className="label cursor-pointer">
+                    <span className="label-text">Remember me</span>
+                    <input type="checkbox" className="toggle" checked />
+                </label>
+            </div>
+
+            <input type="checkbox" className="toggle" checked />
+
             <div className="bg-blue-200 grid md:flex lg:flex gap-6 justify-around px-4 py-6 items-center">
                 <img className="w-20 rounded-full mb-2 " src={img} alt="" />
-                <h2 className="text-2xl font-semibold font-serif">Technology and Electronics</h2>
+                <h2 className="text-2xl font-semibold font-serif">Automotive</h2>
                 <div className="flex gap-1 items-center">
                     <input className=" h-1/2 px-2 py-1 rounded-md" type="text" placeholder="search here" />
                     <button className="rounded-md px-2 btn-active">Search</button>
@@ -55,7 +65,7 @@ const Navbar = () => {
                                 }
                             </ul>
                         </div>
-                        <a className="btn btn-ghost font- bold normal-case text-xl  bg-sky-200 text-whie">Evolving Electronics</a>
+                        <a className="btn btn-ghost font- bold normal-case text-xl  bg-sky-200 text-whie">UrbanPulse Motors</a>
                     </div>
                     <div className="navbar-center hidden grid lg:flex">
                         <ul className="menu menu-horizontal px-1">
@@ -65,18 +75,18 @@ const Navbar = () => {
                         </ul>
                     </div>
 
-                   
+
 
                     <div className="navbar-end">
 
 
-                    {
-                        user ?
-                            <button onClick={hendelout} className=" btn bg-sky-200 md:text-lg lg:text-lg lg:mr-4 hover:font-bold hover:underline hover:bg-orange-200">SignOut</button>
-                            :
-                            <Link to="/register"> <button className=" btn bg-sky-200 md:text-lg lg:text-lg lg:mr-4 hover:font-bold hover:underline hover:bg-orange-200">Register</button></Link>
-                    }
-                        
+                        {
+                            user ?
+                                <button onClick={hendelout} className=" btn bg-sky-200 md:text-lg lg:text-lg lg:mr-4 hover:font-bold hover:underline hover:bg-orange-200">SignOut</button>
+                                :
+                                <Link to="/register"> <button className=" btn bg-sky-200 md:text-lg lg:text-lg lg:mr-4 hover:font-bold hover:underline hover:bg-orange-200">Register</button></Link>
+                        }
+
 
                     </div>
                 </div>

@@ -95,7 +95,7 @@ const Signout = () => {
 
                         </form>
                         <div className="mx-6 my-4">
-                            <p className="btn mt-4 w-full">Log in With <button onClick={hendelgoogle} className="text-blue-600 hover:bg-emerald-300 hover:px-3 py-2 rounded-lg hover:text-l btn-outline btn-secondary">GOOGLE</button></p>
+                            <p className="btn mt-4 btn  btn-secondary w-full"> <button onClick={hendelgoogle} className=""> Sign Up With GOOGLE</button></p>
                         </div>
                     </div>
                     <div className='bg-red-200 rounded-lg'>

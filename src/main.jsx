@@ -19,6 +19,8 @@ import Latestcar from './Components/Navbar/Home/Latestcar/Latestcar';
 import Best from './Components/Navbar/Home/Best/Best';
 import Error from './Components/Navbar/Home/Error/Error';
 import UserId from './Components/Navbar/Home/UserId/UserId';
+import UpdateUser from './Components/Navbar/MyCard/UpdateUser';
+// import DetialsId from './DetialsId';
 
 const router = createBrowserRouter([
   {
@@ -58,15 +60,27 @@ const router = createBrowserRouter([
 
       },
       {
-        path: '/car/:id',
+        path: '/user/:id',
         element:<PrivetRoute>  <UserId></UserId> </PrivetRoute> ,
-        loader:(params) => fetch(`/data.json/${params.id}`)
+        loader: () => fetch('/data.json'),
+
+      },
+
+      // {
+      //   path:'/user/:id',
+      //   element:<PrivetRoute> <DetialsId></DetialsId> </PrivetRoute>,
+      //   loader: ({params}) => fetch(`https://assigment-10-serverside.vercel.app/product/${params.id}`)
+      // },
+      {
+        path: '/mycard',
+        element:<PrivetRoute><MyCard></MyCard> </PrivetRoute> ,
+        loader:() => fetch('https://assigment-10-serverside.vercel.app/user')
 
       },
       {
-        path: '/user',
-        element:<PrivetRoute> <MyCard></MyCard> </PrivetRoute> ,
-        loader:() => fetch('http://localhost:5000/user')
+        path: '/user/:id',
+        element:<PrivetRoute>  <UpdateUser></UpdateUser> </PrivetRoute> ,
+        loader:({params}) => fetch(`https://assigment-10-serverside.vercel.app/user/${params.id}`)
 
       },
     ]

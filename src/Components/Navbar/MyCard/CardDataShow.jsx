@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import swal from "sweetalert";
 
@@ -7,7 +8,7 @@ const CardDataShow = ({ PropsCarddata, Setuser, user }) => {
     const { _id, image, name, brandnm, category, Description, Price, rating } = PropsCarddata
 
     const hendelDelete = id => {
-        fetch(`http://localhost:5000/user/${id}`, {
+        fetch(`https://assigment-10-serverside.vercel.app/user/${id}`, {
             method: 'DELETE'
         })
             .then(result => {
@@ -15,7 +16,11 @@ const CardDataShow = ({ PropsCarddata, Setuser, user }) => {
             })
             .then(data => {
                 console.log(data);
-                swal("Deleted", "Successfully Delete", "success");
+                if(data.deletedCount !==0){
+                    swal("Deleted", "Successfully Delete", "success");
+                }
+                
+                
                 const remaining = user.filter(data => data?._id !== id)
                 Setuser(remaining)
 
@@ -38,7 +43,7 @@ const CardDataShow = ({ PropsCarddata, Setuser, user }) => {
                             <p className="font-semibold text-lg text-white"> Price : {Price}</p>
 
                             <Link ><button onClick={() => hendelDelete(_id)} className="btn btn-outline btn-error">Deleted</button></Link>
-                            <Link to="/login"><button className="btn  btn-outline btn-secondary">Edit</button></Link>
+                            <Link to={`/user/${_id}`}><button className="btn  btn-outline btn-secondary">Edit</button></Link>
                             <Link to="/login"><button className="btn btn-warning">Buy Now</button></Link>
                         </div>
                     </div>
