@@ -6,7 +6,7 @@
         "title": " Toyota Camry 2023",
         "description": "The reliable and fuel-efficient Toyota Camry offers a smooth ride with advanced safety features.",
         "price": "$ 250,00",
-        "rating": 4.8
+        "rating": "/132 review"
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@
         "title": " Ford Mustang GT",
         "description": "The iconic Ford Mustang GT combines performance and style, making every drive exhilarating.",
         "price": "$ 400,00",
-        "rating": 4.7
+        "rating": "/272 review"
     },
     {
         "id": 3,
@@ -24,7 +24,7 @@
         "title": " BMW 3 Series X7",
         "description": "The BMW 3 Series is a luxury compact sedan known for its sporty handling and elegant interior.",
         "price":"$ 350,00",
-        "rating": 5.0
+        "rating": "/632 review"
     },
     {
         "id": 4,
@@ -33,7 +33,7 @@
         "title": " Mercedes-Benz E-Class",
         "description": "The Mercedes-Benz E-Class offers a blend of luxury, comfort, and advanced technology.",
         "price": "$ 500,00",
-        "rating": 4.7
+        "rating": "/182 review"
     },
     {
         "id": 5,
@@ -42,7 +42,7 @@
         "title": " Tesla Model v8",
         "description": "The Tesla Model 3 is an all-electric car with cutting-edge technology and eco-friendly performance.",
         "price": "$ 450,00",
-        "rating": 4.6
+        "rating": "/832 review"
     },
     {
         "id": 6,
@@ -51,7 +51,7 @@
         "title": " Honda Civic X33",
         "description": "The Honda Civic is a practical and efficient compact car known for its reliability.",
         "price": "$ 200,00",
-        "rating": 5.0
+        "rating": "/192 review"
     },
     {
         "id": 7,
@@ -60,7 +60,7 @@
         "title": "  Chevrolet Silverado 77-Class",
         "description": "The Chevrolet Silverado is a powerful and versatile pickup truck designed for work and play.",
         "price": "$ 350,00",
-        "rating": 4.8
+        "rating": "92 review"
     },
     {
         "id": 8,
@@ -69,7 +69,7 @@
         "title": "  Nissan Altima 2.5 SV",
         "description": "The Nissan Altima offers a comfortable and spacious ride, ideal for daily commuting.",
         "price": "$ 240,00",
-        "rating": 4.7
+        "rating": "/932 review"
     },
     {
         "id": 9,
@@ -78,7 +78,7 @@
         "title": " Audi A4 X9",
         "description": "The Audi A4 combines luxury, performance, and cutting-edge technology in a compact package.",
         "price":"$ 420,00",
-        "rating": 4.5
+        "rating": "/682 review"
     },
     {
         "id": 10,
@@ -87,7 +87,7 @@
         "title": " Lexus RX SUV ",
         "description": "The Lexus RX is a premium SUV known for its comfort, quality, and refined driving experience.",
         "price": "$ 48,000",
-        "rating": 5.0
+        "rating": "/262 review"
     },
     {
         "id": 11,
@@ -96,7 +96,7 @@
         "title": " Subaru Outback Model car",
         "description": "The Subaru Outback offers rugged capability and versatility for adventurous journeys.",
         "price": "$ 280,00",
-        "rating": 4.9
+        "rating": "/232 review"
     },
     {
         "id": 12,
@@ -105,7 +105,7 @@
         "title": " Mazda CX-5 Model Car",
         "description": "The Mazda CX-5 is a stylish and sporty SUV that balances performance and practicality.",
         "price": "$ 300,00",
-        "rating": 4.7
+        "rating": "/32 review"
         
     }
 ]
