@@ -38,7 +38,9 @@ const Signout = () => {
         CreateUser(email, password)
             .then(result => {
                 console.log(result.user);
+              
                 swal("successful!", "Registration successfully", "success");
+                event.target.reset()
             })
             .catch(error => {
                 console.error(error)

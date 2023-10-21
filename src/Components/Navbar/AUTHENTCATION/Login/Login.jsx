@@ -21,7 +21,9 @@ const Login = () => {
         LoginUser(email, password)
             .then(result => {
                 console.log(result.user);
+                
                 swal("successfully!", "you are successfully Login!", "success");
+                 event.target.reset()
                 navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
