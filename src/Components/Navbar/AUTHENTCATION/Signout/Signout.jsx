@@ -59,7 +59,7 @@ const Signout = () => {
     }
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen  bg-red-200">
                 <div className="hero-content flex-col  ">
                     <div className="text-center  ">
                         <h1 className="text-5xl font-bold">Register Now!</h1>

@@ -16,7 +16,7 @@ const Footer = () => {
             <div className="grid md:flex lg:flex justify-around w-3/4">
 
 
-                <p className="mt-20  pb-2"><small>@2023 All right Reserv by Elolving Electroics</small> </p>
+                <p className="mt-20  pb-2"><small>@2023 All right Reserv by Tonmoy</small> </p>
                 <span className=" mt-6 md:mt-20 pl-8 md:pl-16 lg:pl-28 pb-2 flex gap-6">
  
                     <FaFacebook></FaFacebook>

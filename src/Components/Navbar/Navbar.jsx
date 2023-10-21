@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import img from './../../assets/img/car img/automotive.png'
+import img2 from './../../assets/img/car img/mailuser.logo.jpg'
 import { useContext } from "react";
 import { AuthProvider } from "./AUTHENTCATION/Provider/Provider";
 import swal from "sweetalert";
@@ -29,7 +30,7 @@ const Navbar = () => {
         <li className="mr-2 font-semibold text-lg hover:underline hover:font-bold "><NavLink to="/">Home</NavLink></li>
         <li className="mr-2 font-semibold text-lg hover:underline hover:font-bold "><NavLink to="/addproduct">Add Product</NavLink></li>
         <li className="mr-2 font-semibold text-lg hover:underline hover:font-bold "><NavLink to="/mycard">My Cart</NavLink></li>
-        <li className="mr-2 font-semibold text-base rounded-xl bg-slate-100 hover:underline hover:font-bold "><NavLink to="/login">Login</NavLink></li>
+        
     </>
     return (
         <div className="bg-orange-300">
@@ -69,6 +70,7 @@ const Navbar = () => {
                             }
                         </ul>
                     </div>
+                
 
 
 
@@ -79,7 +81,12 @@ const Navbar = () => {
                             user ?<>
                                 <span> {user.email} <img src={user.img} alt="" /></span>  <button onClick={hendelout} className=" btn btn-sm  bg-sky-200 md:text-lg lg:text-lg lg:mr-4 hover:font-bold hover:underline hover:bg-orange-200">SignOut</button></>
                                 :
-                                <Link to="/register"> <button className=" btn btn-sm  bg-sky-200 md:text-lg lg:text-lg lg:mr-4 hover:font-bold hover:underline hover:bg-orange-200">Register</button></Link>
+                                <>
+                                <div className="items-center flex">
+                                <img className="w-14 rounded-full pr-2 " src={img2} alt="" />
+                                <Link to="/login"> <button className=" btn btn-sm  bg-sky-200 md:text-lg lg:text-lg lg:mr-4 hover:font-bold hover:underline hover:bg-orange-200">Login</button></Link>
+                                </div>
+                                 </>
                         }
 
 
