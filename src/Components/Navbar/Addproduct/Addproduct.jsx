@@ -3,43 +3,43 @@ import Footer from "../Home/Footer/Footer";
 
 
 const Addproduct = () => {
-    const hendelbtn=event =>{
-         event.preventDefault()
-         const form=event.target;
-         const image=form.image.value
-         const name=form.name.value
-         const brandnm=form.brandnm.value
-         const category=form.category.value
-         const Price=form.Price.value
-         const Description=form.Description.value
-         const rating=form.rating.value
-         const user={image,name,brandnm,category,Price,Description,rating}
-         console.log(user);
+    const hendelbtn = event => {
+        event.preventDefault()
+        const form = event.target;
+        const image = form.image.value
+        const name = form.name.value
+        const brandnm = form.brandnm.value
+        const category = form.category.value
+        const Price = form.Price.value
+        const Description = form.Description.value
+        const rating = form.rating.value
+        const user = { image, name, brandnm, category, Price, Description, rating }
+        console.log(user);
 
-         fetch('https://assigment-10-serverside.vercel.app/user',{
-            method:'POST',
-            headers:{
-                'content-type' : 'application/json'
+        fetch('https://assigment-10-serverside.vercel.app/user', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
             },
-            body:JSON.stringify(user)
-         })
-         .then(res => res.json())
-         .then(data => {
-            console.log(data);
-            if (data.insertedId) {
-                
-                swal("Congratulation", "Successfully added", "success");
-            }
-         })
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+
+                    swal("Congratulation", "Successfully added", "success");
+                }
+            })
     }
 
     return (
         <div className="mt-10">
             <div className="bg-fuchsia-300">
-            <h1 className="text-2xl font-sans mx-10 bg-yellow-100 p-4 font-extrabold text-center mb-10">ADD YOUR PRODUCT</h1>
+                <h1 className="text-2xl font-sans mx-10 bg-yellow-100 p-4 font-extrabold text-center mb-10">ADD YOUR PRODUCT</h1>
             </div>
 
-            
+
             <div>
                 <form onSubmit={hendelbtn}>
                     <div className="flex px-10 mb-10 gap-6">
@@ -84,7 +84,15 @@ const Addproduct = () => {
                             </label>
                             <label className="input-group input-group-vertical">
                                 <span>category</span>
-                                <input type="text" name="category" placeholder="Category" required className="input input-bordered" />
+
+                                
+                                     
+                                    
+                                     
+                             
+
+                                <input type="text" name="category" placeholder="Category" required className="input select select-secondary w-full input-bordered" />
+                                
                             </label>
                         </div>
                     </div>

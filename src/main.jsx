@@ -78,7 +78,7 @@ const router = createBrowserRouter([
 
       },
       {
-        path: '/user/:id',
+        path: '/car/:id',
         element:<PrivetRoute>  <UpdateUser></UpdateUser> </PrivetRoute> ,
         loader:({params}) => fetch(`https://assigment-10-serverside.vercel.app/user/${params.id}`)
 
