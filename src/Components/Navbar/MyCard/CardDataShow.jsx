@@ -13,13 +13,12 @@ const CardDataShow = ({ PropsCarddata, Setuser, user }) => {
         })
             .then(result => {
                 console.log(result.json());
-                if(result.deletedCount === 1){
-                    swal("Deleted", "Successfully Delete", "success");
-                }
             })
             .then(data => {
                 console.log(data);
-                
+                if(data.deletedCount === 1){
+                    swal("Deleted", "Successfully Delete", "success");
+                }
                 
                 
                 const remaining = user?.filter(data => data?._id !== id)
