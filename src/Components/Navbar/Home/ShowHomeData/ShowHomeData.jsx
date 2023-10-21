@@ -25,6 +25,13 @@ const ShowHomeData = () => {
                     loderdata.map(data =>  <ShowData key={data.id} propsData={data}></ShowData>)
                 }
             </div>
+
+            <div className="form-control mt-4 ">
+                <label className="label cursor-pointer">
+                    <span className="label-text text-xl text-sky-700 font-semibold">Toggle me</span>
+                    <input type="checkbox" className="toggle" checked />
+                </label>
+            </div>
         </div>
     );
 };

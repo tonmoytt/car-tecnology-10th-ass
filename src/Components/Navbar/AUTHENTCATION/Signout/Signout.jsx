@@ -98,7 +98,7 @@ const Signout = () => {
                             <p className="btn mt-4 btn  btn-secondary w-full"> <button onClick={hendelgoogle} className=""> Sign Up With GOOGLE</button></p>
                         </div>
                     </div>
-                    <div className='bg-red-200 rounded-lg'>
+                    <div className='bg-red-200 rounded-base'>
                         {
                             password && <p className='mt-4 px-4 py-2 font-semibold text-2xl '> {password}</p>
                         }

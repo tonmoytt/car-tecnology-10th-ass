@@ -8,7 +8,7 @@ import car6 from './../../../../assets/img/car img/4.Mercedes-Benz E-Class.jpg'
 const CarouselCar = () => {
     return (
         <div className="p-6 mt-8 bg-fuchsia-100">
-            <p className="text-3xl font-semibold mb-3 text-center">Carousel car's </p>
+            <p className="text-3xl font-semibold mb-3 text-center">Picture of car </p>
 
             <div className="bg-slate-100">
                 <div className="carousel w-full max-h-[600px]">
